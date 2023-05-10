@@ -21,6 +21,19 @@
     background-color:green;   
            
 }
+    div.grandkids li {
+    background-color:red;   
+           
+}
+
+    .add-border{
+        border:1px solid #000;
+}
+
+    .add-background{
+        background-color: gold;
+    }    
+
         </style>
     </head>
     <body>
@@ -34,6 +47,9 @@
                 <li><a href="#class">class</a></li>
                 <li><a href="#compound">compound</a></li>
                 <li><a href="#child">child</a></li>
+                <li><a href="#descendant">descendant</a></li>
+                <li><a href="#multiple">multiple classes</a></li>
+        
             </ul>
         </nav> 
     </header>           
@@ -114,9 +130,59 @@
         <div>
             <ul class="my-kids">
                     
-              <li child="new-list">I'm in an li inside a ul with a class of my-kids</li>
-              <li child="new-list">I'm in an li inside a ul with a class of my-kids</li>
-              <li child="new-list">I'm in an li inside a ul with a class of my-kids</li>
+                <li child="new-list">I'm in an li inside a ul with a class of my-kids</li>
+                <li child="new-list">I'm in an li inside a ul with a class of my-kids</li>
+                <li child="new-list">I'm in an li inside a ul with a class of my-kids</li>
+              
+                    </ul>
+                    </div>
+        </fieldset>
+
+        <legend><a id="descendant">descendant</a></legend>
+            <p>Using a descendant selector we caqn access all elements at any depth with the current element.</p>
+            <p>Here's how the CSS is applied to the element:</p>
+            <pre><code>div.grandkids li{
+                background-color:red;   
+                       
+            }
+</code></pre>
+
+        <p>Here's what it looks like:</p>
+           
+        <div class="grandkids">
+            <ul>
+               
+              <li>I'm in an li inside a div with a class of grandkids</li>
+              <li>I'm in an li inside a div with a class of grandkids</li>
+              <li>I'm in an li inside a div with a class of grandkids</li>
+              
+                    </ul>
+                    </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><a id="multiple">multiple classes</a></legend>
+            <p>We can apply multiple classes to an element by placing class names separated by spaces in the class attribute.</p>
+            <p>Here's how we hook an class multiple classes to an element:</p>
+            <pre><code>class="add-border add-background"</code></pre>
+            <p>Here's how the CSS is applied to the element:</p>
+            <pre><code> .add-border{
+            border:1px solid #000 ;
+            }
+            .add-background{
+            background-color:gold;
+            }
+
+</code></pre>
+
+
+            <p>Here's what it looks like:</p>
+            <div>
+                <ul>
+                    
+                     <li class="add-border add-background">I'm in an li that has 2 classes</li>       
+                     <li class="add-border add-background">I'm in an li that has 2 classes</li> 
+                     <li class="add-border add-background">I'm in an li that has 2 classes</li> 
                     </ul>
                     </div>
         </fieldset>
